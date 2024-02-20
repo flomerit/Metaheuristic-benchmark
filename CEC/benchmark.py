@@ -12,9 +12,9 @@ def Sphere(X):
     # F* = 0
     # X* = [0, 0, ..., 0]
     if X.ndim==1:
-        X = X.reshape(1, -1)
+        X = X.reshape(1, -1)    # 如果 X 是一维数组，则将其转换为形状为 (1, n) 的二维数组，其中 n 是 X 中元素的数量。这样做是为了保证后续计算的一致性
     
-    F = np.sum(X**2, axis=1)
+    F = np.sum(X**2, axis=1)    # 结果是一个包含每行平方和的一维数组。
     
     return F
 
